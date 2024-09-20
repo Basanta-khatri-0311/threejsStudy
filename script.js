@@ -32,6 +32,25 @@ let material = new THREE.MeshBasicMaterial({color: "red"});
 let mesh = new THREE.Mesh(box, material);
 scene.add(mesh);
 
+
+//mesh.position is used to position the mesh in 3D space in x,y,z axis
+// mesh.position.y = 0;
+// mesh.position.x = -1;
+// mesh.position.z = 3;
+
+
+//mesh.rotation is used to rotate the mesh in 3D space in x,y,z axis
+// mesh.rotation.x = 1;
+// mesh.rotation.y = 1;
+// mesh.rotation.z = 1;
+
+
+//mesh.scale is used to scale(increase or decrease size) the mesh in 3D space in x,y,z axis
+// mesh.scale.x = 2;
+// mesh.scale.y = 2;
+// mesh.scale.z = 2;
+
+
 const canvas = document.querySelector("#draw");
 let renderer = new THREE.WebGLRenderer({canvas});
 renderer.setSize(window.innerWidth, window.innerHeight);
