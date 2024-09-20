@@ -44,8 +44,14 @@ scene.add(mesh);
 // mesh.rotation.y = 1;
 // mesh.rotation.z = 1;
 
+//using MATH.PI to rotate the mesh in 3D space in x,y,z axis
+// mesh.rotation.x = Math.PI / 4;
+// mesh.rotation.y = Math.PI / 4;
+// mesh.rotation.z = Math.PI / 4;
+
 
 //mesh.scale is used to scale(increase or decrease size) the mesh in 3D space in x,y,z axis
+
 // mesh.scale.x = 2;
 // mesh.scale.y = 2;
 // mesh.scale.z = 2;
