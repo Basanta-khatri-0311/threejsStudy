@@ -4,7 +4,6 @@
 <p>For creating a poject in vite using vanila js we need to have node js onstalled.</p>
 <p>After installing node js go to desktop using termial/cmd and run the following command to install vite</p>
 <pre>npm create vite@latest.
-After this the terminal will ask for the name of the project, we can name it anything but for this project we will name it threeyt .
-After this select the framework as vanilla and variant as javascript.
-After this the terminal will give you some dommands .Follow them.
-</pre>
+After this the terminal will ask for the name of the project, we can name it anything but for this project we will name it threeyt .</pre>
+<p>After this select the framework as vanilla and variant as javascript</p>
+<p></p>After this the terminal will give you some dommands .Follow them</p>
