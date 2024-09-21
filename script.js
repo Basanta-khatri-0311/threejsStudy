@@ -27,9 +27,10 @@ let camera = new THREE.PerspectiveCamera(85, window.innerWidth / window.innerHei
 camera.position.z = 5;
 scene.add(camera)
 
-let box = new THREE.BoxGeometry(1, 1, 1);
+let box = new THREE.BoxGeometry(3, 3, 3);
 let material = new THREE.MeshBasicMaterial({color: "red"});
 let mesh = new THREE.Mesh(box, material);
+
 scene.add(mesh);
 
 
@@ -44,6 +45,7 @@ scene.add(mesh);
 // mesh.rotation.y = 1;
 // mesh.rotation.z = 1;
 
+
 //using MATH.PI to rotate the mesh in 3D space in x,y,z axis
 // mesh.rotation.x = Math.PI / 4;
 // mesh.rotation.y = Math.PI / 4;
@@ -57,7 +59,26 @@ scene.add(mesh);
 // mesh.scale.z = 2;
 
 
-const canvas = document.querySelector("#draw");
-let renderer = new THREE.WebGLRenderer({canvas});
+
+let renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#draw")});
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.render(scene, camera);
+
+// function animate(){
+//     window.requestAnimationFrame(animate);
+//     renderer.render(scene, camera);
+//     mesh.rotation.y += 0.01;
+//     mesh.rotation.z += 0.01;
+//     mesh.rotation.x += 0.01;
+// }
+
+let clock = new THREE.Clock();
+
+function animate(){
+    window.requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+    mesh.rotation.y = clock.getElapsedTime();
+    mesh.rotation.z = clock.getElapsedTime();
+    mesh.rotation.x = clock.getElapsedTime();
+}
+animate();
+
