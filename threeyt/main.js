@@ -57,7 +57,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 5;
 scene.add(camera);
 
-const geometry = new THREE.CylinderGeometry(1, 1, 1);
+const geometry = new THREE.CylinderGeometry(2, 2, 3);
 const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
@@ -73,6 +73,7 @@ window.addEventListener("resize", () => {
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
+controls.dampingFactor = 0.02;
 controls.autoRotate = false;
 controls.autoRotateSpeed = 11;
 controls.enableZoom = true;
