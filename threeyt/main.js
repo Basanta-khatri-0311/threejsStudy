@@ -57,8 +57,8 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 5;
 scene.add(camera);
 
-const geometry = new THREE.CylinderGeometry(2, 2, 3);
-const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+const geometry = new THREE.BoxGeometry(2, 2, 3);
+const material = new THREE.MeshStandardMaterial({color: 0x00ff00, wireframe: true});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
