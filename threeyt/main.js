@@ -57,8 +57,21 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 5;
 scene.add(camera);
 
+// Add a directional light to simulate studio lighting with increased intensity
+const studioLight = new THREE.DirectionalLight(0xffffff, 1.5);
+studioLight.position.set(5, 10, 7);
+studioLight.castShadow = true;
+scene.add(studioLight);
+
+// Add ambient light for overall illumination
+const ambientLight = new THREE.AmbientLight(0x404040, 0.3);
+scene.add(ambientLight);
+
+
+
+
 const geometry = new THREE.BoxGeometry(2, 2, 3);
-const material = new THREE.MeshStandardMaterial({color: 0x00ff00, wireframe: true});
+const material = new THREE.MeshStandardMaterial({color: 0x00ff00});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
